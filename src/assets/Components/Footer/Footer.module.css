@@ -1,0 +1,30 @@
+.footerWrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 12%;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+}
+
+.social i{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover{
+        color: var(--prim-color);
+        transform: translateY(-5px);
+    }
+}
+
+@media screen and (max-width:900px) {
+    .footerWrapper{
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+    
+    }
+}

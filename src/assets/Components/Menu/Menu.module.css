@@ -1,0 +1,66 @@
+.menuWrapper{
+    flex-direction: column;
+    gap: 50px;
+}
+
+.menuCards{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 50px;
+    width: 100%;
+}
+
+.menuCard{
+    width: 100%;
+    padding: 40px 25px;
+    background-color: rgba(131, 131, 131, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-around;
+    position: relative;
+    z-index: 1;
+}
+
+.menuCard::after{
+    position: absolute;
+    content: '';
+    height: 30px;
+    width: 30px;
+    bottom: 30px;
+    left: 80px;
+    background-color: var(--prim-color);
+    z-index: -1;
+    border-radius: 50%;
+    transition: var(--transition);
+
+    &:hover{
+        height: 35px;
+        width: 35px;
+    }
+}
+
+.menuCard h3{
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+
+.menuCard  img{
+    height: 70px;
+    width: 70px;
+    transition: var(--transition);
+}
+
+.menuCard:hover  img{
+    transform: translateY(-5px);
+}
+
+
+@media screen and (max-width:1100px) {
+    .menuCards{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+

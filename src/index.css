@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Rubik' , sans-serif;
+
+    list-style: none;
+    text-decoration: none;
+
+    scroll-behavior: smooth;
+}
+
+:root{
+    --prim-color: #ffd737;
+    --transition: 0.6s;
+}
+
+.section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 15%;
+}
+
+button{
+    height: 50px;
+    width: 150px;
+    background-color: var(--prim-color);
+    color: #1c1c1c;
+    font-size: 1rem;
+    font-weight: 500;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+
+    &:hover{
+        background-color: #dddddd;
+        color: #1c1c1c;
+    }
+
+}
+
+.section_title{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+.section_title h2{
+    font-size: 2.2rem;
+}
+
+
+.section_title div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.section_title div button{
+    width: 180px;
+}
+
+.section_title div button img{
+    transition: var(--transition);
+}
+
+.section_title button:hover img{
+    transform: rotate(40deg);
+}
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .section_title div{
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+
+    }
+}
